@@ -1,0 +1,239 @@
+/* 🔹 User Profile Container */
+.user-profile-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 🔹 Header */
+.user-profile-container h2 {
+    text-align: center;
+    color: #007bff; /* Blue header */
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.user-profile-container h3 {
+    color: #0056b3; /* Darker blue for subheader */
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* 🔹 Add User Button */
+.add-user-button {
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    display: block;
+    margin: 15px auto;
+    transition: background-color 0.3s ease;
+}
+
+.add-user-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* 🔹 Form Styling */
+.user-form {
+    background: #f1f5f9; /* Light blue-gray */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.user-form .form-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.user-form .form-control,
+.user-form .form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ced4da; /* Bootstrap gray */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.user-form .form-control:focus,
+.user-form .form-select:focus {
+    border-color: #007bff; /* Blue focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* 🔹 Create User Button */
+.create-user-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-user-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* 🔹 User List */
+.user-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.user-item {
+    background: #f8f9fa; /* Light gray-blue */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.user-item:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.user-item strong {
+    color: #333;
+    font-size: 16px;
+}
+
+/* 🔹 Get History & Delete Buttons */
+.history-button {
+    background-color: #007bff; /* Blue */
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.history-button:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+.delete-button {
+    background-color: #dc3545; /* Red */
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #c82333; /* Darker red */
+}
+
+/* 🔹 Task List */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.task-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* 🔹 Task Status Colors */
+.task-status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.task-status.to-do {
+    color: white;
+    background-color: #dc3545; /* Red */
+}
+
+.task-status.in-progress {
+    color: #212529; /* Dark gray */
+    background-color: #ffc107; /* Yellow */
+}
+
+.task-status.done {
+    color: white;
+    background-color: #28a745; /* Green */
+}
+
+/* 🔹 Task History */
+.task-history h5 {
+    font-size: 16px;
+    color: #007bff; /* Blue */
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.task-history ul {
+    list-style: none;
+    padding: 0;
+}
+
+.task-history li {
+    font-size: 14px;
+    padding: 8px;
+    background: #f8f9fa; /* Light gray-blue */
+    margin-top: 5px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-history-button {
+    background-color: #dc3545; /* Red */
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-history-button:hover {
+    background-color: #c82333; /* Darker red */
+}

@@ -1,0 +1,35 @@
+/* App.css */
+.app {
+  min-height: 100vh;
+  background-color: #e9ecef; /* Light gray-blue background */
+}
+
+/* Navbar link styles */
+.nav-link {
+  color: #ffffff !important; /* White text for contrast on blue */
+}
+
+.nav-link.active {
+  font-weight: bold;
+  background-color: #0056b3; /* Darker blue for active link */
+  border-radius: 5px;
+}
+
+/* Navbar brand (logo) */
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #ffffff !important; /* White text */
+}
+
+/* Hover effect for nav links */
+.nav-link:hover {
+  color: #cce5ff !important; /* Light blue on hover */
+}
+
+/* Content area */
+.content {
+  background-color: #ffffff; /* White content background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}

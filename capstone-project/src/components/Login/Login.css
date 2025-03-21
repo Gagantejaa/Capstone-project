@@ -1,0 +1,92 @@
+/* 🔹 Login Container */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 🔹 Header */
+.login-container h2 {
+    font-size: 28px;
+    color: #007bff; /* Blue */
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* 🔹 Login Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increased gap for better spacing */
+}
+
+/* 🔹 Form Labels */
+.login-form .form-label {
+    text-align: left;
+    font-weight: 600;
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* 🔹 Form Inputs */
+.login-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da; /* Bootstrap gray */
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form .form-control:focus {
+    border-color: #007bff; /* Blue focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* 🔹 Login Button */
+.login-form .btn-primary {
+    background-color: #007bff; /* Blue */
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+/* 🔹 Sign-Up Button */
+.signup-button.btn-success {
+    background-color: #28a745; /* Green */
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-button.btn-success:hover {
+    background-color: #218838; /* Darker green */
+}
+
+/* 🔹 Remove Navbar Styling (Moved to App.css if needed) */
+.navbar {
+    /* Removed from here as it’s not used in Login component */
+}

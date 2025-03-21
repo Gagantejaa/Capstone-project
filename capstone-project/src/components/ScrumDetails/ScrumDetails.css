@@ -1,0 +1,168 @@
+/* 🔹 Scrum Details Container */
+.scrum-details-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 🔹 Headers */
+.scrum-details-container h3 {
+    color: #007bff; /* Blue */
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.scrum-details-container h4 {
+    color: #0056b3; /* Darker blue */
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* 🔹 Task List */
+.task-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.task-item {
+    background: #f8f9fa; /* Light gray-blue */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.task-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Spacing between elements */
+}
+
+.task-item strong {
+    color: #333;
+    font-size: 16px;
+}
+
+/* 🔹 Task History Styling */
+.task-history {
+    margin-top: 15px;
+    padding: 12px;
+    background: #f1f5f9; /* Light blue-gray */
+    border-radius: 8px;
+    width: fit-content;
+}
+
+/* 🔹 History Title */
+.task-history h5 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #007bff; /* Blue */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* 🔹 History List */
+.task-history ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 🔹 Align Status & Date in a Row */
+.task-history li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px; /* Consistent width */
+    font-size: 14px;
+    padding: 10px;
+    background: #ffffff;
+    border-left: 4px solid #007bff; /* Blue border */
+    margin-top: 5px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.task-history li:hover {
+    background-color: #e9ecef; /* Light gray hover */
+}
+
+/* 🔹 Status Label */
+.status-label {
+    display: inline-block;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-transform: capitalize;
+    min-width: 100px;
+    text-align: center;
+}
+
+/* 🔹 Status Colors */
+.status-label.to-do {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.status-label.in-progress {
+    background-color: #ffc107; /* Yellow */
+    color: #212529; /* Dark gray */
+}
+
+.status-label.done {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+/* 🔹 Select Dropdown */
+.task-item .form-select {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-item .form-select:focus {
+    border-color: #007bff; /* Blue focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* 🔹 User List */
+.user-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.user-item {
+    background: #f8f9fa; /* Light gray-blue */
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    transition: transform 0.2s ease;
+}
+
+.user-item:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+}
