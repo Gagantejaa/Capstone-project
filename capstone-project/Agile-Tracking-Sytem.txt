@@ -1,0 +1,545 @@
+﻿Agile Track System - DFDs and UML Diagrams
+System: Agile Track System (Single Page Application for Task Management and Team Collaboration)
+________________
+
+
+Level 0 DFD (Context Diagram)
+
+Description:
+
+The Level 0 DFD represents the Agile Track System as a single process interacting with external entities (User and Admin) and a database.
+Entities & Data Flow:
+* User: Registers, logs in, views tasks, tracks progress, views team details.
+* Admin: Logs in, manages scrum teams, tasks, and users, views user history.
+* Agile Track System (Main Process): Handles all interactions.
+* Database: Stores user credentials, scrum teams, tasks, and statuses.
+Diagram:
+
++---------------------------+          +--------------------------------+
+
+|   External Entity: User   | ------> |    Agile Track System         |
+
++---------------------------+          +--------------------------------+
+
+| Registers, Logs In,                  |
+
+| Views Tasks, Team Details           v
+
+|                                +-----------------------+
+
+|                                | Data Store: Database |
+
+|                                +-----------------------+
+
+| Manages Teams, Tasks, Users         |
+
+v                                     |
+
++---------------------------+          +----|
+
+|   External Entity: Admin  | <------- |
+
++---------------------------+          |
+Data Flows:
+* User -> System: Registration details, login credentials, task/team view requests.
+* System -> User: Welcome page, task lists, team details, profile data.
+* Admin -> System: Login credentials, team/task/user management requests.
+* System -> Admin: Team details, task statuses, user profiles, history.
+* System <-> Database: Stores/retrieves all data.
+________________
+
+
+Level 1 DFD (Detailed Diagram)
+
+Description:
+
+The Level 1 DFD breaks down the Agile Track System into sub-processes, detailing user and admin interactions with the system and database.
+Sub-Processes:
+1. User Authentication: Signup and login for users.
+2. User Task Management: Displays tasks and team details.
+3. User Profile Viewing: Displays user-specific task profiles.
+4. Admin Authentication: Login for admins.
+5. Admin Team & Task Management: Manages scrum teams and tasks.
+6. Admin User Management: Adds users and views task history.
+Diagram:
+
++-----------------------+                                       +-----------------------+
+
+| External Entity: User |                                       | External Entity: Admin|
+
++-----------------------+                                       +-----------------------+
+
+|                                                             |
+
+v                                                             v
+
++-----------------------+                               +-----------------------+
+
+| Process: 1.1 - Signup |                               | Process: 4.1 - Admin  |
+
+| Store in Database    |                               |        Login         |
+
++-----------------------+                               +-----------------------+
+
+|                                                             |
+
+v                                                             v
+
++-----------------------+                               +-----------------------+
+
+| Process: 1.2 - Login |                               | Process: 5.1 - Manage |
+
+| Validate User        |                               | Teams & Tasks        |
+
++-----------------------+                               +-----------------------+
+
+|                                                             |
+
+v                                                             v
+
++-----------------------+   +----------------+         +-----------------------+
+
+| Process: 2.1 - View   |   | Data Store:   | <------ | Process: 6.1 - Manage |
+
+| Tasks & Teams         |   | Database      | ------->| Users & History      |
+
++-----------------------+   +----------------+         +-----------------------+
+
+|
+
+v
+
++-----------------------+
+
+| Process: 3.1 - View   |
+
+| User Profile         |
+
++-----------------------+
+Data Flows:
+1. Signup (1.1): User submits details -> Stored in Database.
+2. Login (1.2): User submits credentials -> Validated -> Redirect to User Home.
+3. View Tasks & Teams (2.1): User requests data -> Retrieved from Database -> Displayed.
+4. View Profile (3.1): User requests profile -> Retrieved from Database -> Displayed.
+5. Admin Login (4.1): Admin submits credentials -> Validated -> Redirect to Admin Home.
+6. Manage Teams & Tasks (5.1): Admin adds/updates data -> Stored in Database; Requests data -> Displayed.
+7. Manage Users & History (6.1): Admin adds users -> Stored in Database; Requests history -> Displayed.
+________________
+
+
+UML Use Case Diagrams for Each Module/Page
+1. Welcome Page (US_01)
+Actors:
+   * User
+   * System (Database)
+Use Cases:
+   * Visit Welcome Page (default page).
+   * Navigate to Dashboard (view Scrum Teams).
+   * Navigate to Login Page.
+Diagram Description:
+
++-----------------------+
+
+|   Welcome Page       |
+
++-----------------------+
+
+| Actor: User          |
+
++-----------------------+
+
+|
+
+v
+
++---------------+    +---------------+
+
+| View Welcome  |    | Navigate to   |
+
+| Page          |    | Login         |
+
++---------------+    +---------------+
+
+|
+
+v
+
++---------------+
+
+| Navigate to   |
+
+| Dashboard     |
+
++---------------+
+
+|
+
+v
+
++---------------+
+
+| Display Scrum |
+
+| Teams         |
+
++---------------+
+Notes:
+   * User sees "Scrum Teams" title and list of teams with "Get Details" buttons (redirects to Login if not authenticated).
+________________
+
+
+   2. Login Page
+Actors:
+      * User
+      * System (Database)
+Use Cases:
+      * Enter credentials and log in.
+      * Navigate to Sign Up Page.
+      * Validate credentials and redirect (User/Admin Home).
+Diagram Description:
+
++-----------------------+
+
+|   Login Page         |
+
++-----------------------+
+
+| Actor: User          |
+
++-----------------------+
+
+|
+
+v
+
++---------------+    +---------------+
+
+| Enter         |    | Navigate to   |
+
+| Credentials   |    | Sign Up       |
+
++---------------+    +---------------+
+
+|
+
+v
+
++---------------+
+
+| Validate      |
+
+| Credentials   |
+
++---------------+
+
+|       |
+
+v       v
+
++---------------+  +---------------+
+
+| Redirect to   |  | Show Error    |
+
+| Home Page     |  | Message       |
+
++---------------+  +---------------+
+Notes:
+      * Validates email/password with feedback (e.g., "Please include '@'").
+________________
+
+
+      3. Sign Up Page
+Actors:
+         * User
+         * System (Database)
+Use Cases:
+         * Enter signup details.
+         * Validate inputs.
+         * Save new user and redirect to User Home.
+Diagram Description:
+
++-----------------------+
+
+|   Sign Up Page       |
+
++-----------------------+
+
+| Actor: User          |
+
++-----------------------+
+
+|
+
+v
+
++---------------+
+
+| Enter Signup  |
+
+| Details       |
+
++---------------+
+
+|
+
+v
+
++---------------+
+
+| Validate      |
+
+| Inputs        |
+
++---------------+
+
+|       |
+
+v       v
+
++---------------+  +---------------+
+
+| Save &        |  | Show Error    |
+
+| Redirect to   |  | Message       |
+
+| User Home     |  +---------------+
+
++---------------+
+Notes:
+         * Mandatory fields: name, email, password.
+________________
+
+
+         4. User Home Page (US_02)
+Actors:
+            * User (Logged In)
+            * System (Database)
+Use Cases:
+            * View Scrum Teams (Dashboard).
+            * Navigate to Profiles.
+            * Logout.
+            * View Team Details (via Get Details).
+Diagram Description:
+
++-----------------------+
+
+|   User Home Page     |
+
++-----------------------+
+
+| Actor: User          |
+
++-----------------------+
+
+|
+
+v
+
++---------------+    +---------------+
+
+| View Scrum    |    | Navigate to   |
+
+| Teams         |    | Profiles      |
+
++---------------+    +---------------+
+
+|                    |
+
+v                    v
+
++---------------+    +---------------+
+
+| Get Team      |    | Logout        |
+
+| Details       |    +---------------+
+
++---------------+
+
+|
+
+v
+
++---------------+
+
+| Display Team  |
+
+| Details       |
+
++---------------+
+Notes:
+            * Team Details shows tasks (name, description, status) and users (name, email).
+________________
+
+
+            5. User Profiles Page
+Actors:
+               * User (Logged In)
+               * System (Database)
+Use Cases:
+               * View tasks worked by user.
+               * Navigate to Dashboard/Logout.
+Diagram Description:
+
++-----------------------+
+
+|   User Profiles Page |
+
++-----------------------+
+
+| Actor: User          |
+
++-----------------------+
+
+|
+
+v
+
++---------------+    +---------------+
+
+| View Tasks    |    | Navigate to   |
+
+| Worked By Me  |    | Dashboard     |
+
++---------------+    +---------------+
+
+|
+
+v
+
++---------------+
+
+| Logout        |
+
++---------------+
+Notes:
+               * Displays task title, description, and status for the logged-in user.
+________________
+
+
+               6. Admin Home Page (US_03)
+Actors:
+                  * Admin (Logged In)
+                  * System (Database)
+Use Cases:
+                  * View Scrum Teams (Dashboard).
+                  * Navigate to Profiles.
+                  * Add New Scrum.
+                  * View Team Details (via Get Details).
+                  * Logout.
+Diagram Description:
+
++-----------------------+
+
+|   Admin Home Page    |
+
++-----------------------+
+
+| Actor: Admin         |
+
++-----------------------+
+
+|
+
+v
+
++---------------+    +---------------+
+
+| View Scrum    |    | Navigate to   |
+
+| Teams         |    | Profiles      |
+
++---------------+    +---------------+
+
+|                    |
+
+v                    v
+
++---------------+    +---------------+
+
+| Get Team      |    | Add New       |
+
+| Details       |    | Scrum         |
+
++---------------+    +---------------+
+
+|                    |
+
+v                    v
+
++---------------+    +---------------+
+
+| Display Team  |    | Logout        |
+
+| Details       |    +---------------+
+
++---------------+
+Notes:
+                  * Team Details allows task status updates via dropdown.
+________________
+
+
+                  7. Admin Profiles Page
+Actors:
+                     * Admin (Logged In)
+                     * System (Database)
+Use Cases:
+                     * View user profiles.
+                     * Add New User.
+                     * Get User History.
+                     * Navigate to Dashboard/Logout.
+Diagram Description:
+
++-----------------------+
+
+|   Admin Profiles Page|
+
++-----------------------+
+
+| Actor: Admin         |
+
++-----------------------+
+
+|
+
+v
+
++---------------+    +---------------+
+
+| View User     |    | Navigate to   |
+
+| Profiles      |    | Dashboard     |
+
++---------------+    +---------------+
+
+|                    |
+
+v                    v
+
++---------------+    +---------------+
+
+| Get User      |    | Add New       |
+
+| History       |    | User          |
+
++---------------+    +---------------+
+
+|                    |
+
+v                    v
+
++---------------+    +---------------+
+
+| Display Task  |    | Logout        |
+
+| History       |    +---------------+
+
++---------------+
+Notes:
+                     * History shows tasks worked by a user (title, description, status).
+________________
+
+
+Summary
+                     * DFDs: Provide a high-level (Level 0) and detailed (Level 1) view of data flows in the Agile Track System.
+                     * UML Use Case Diagrams: Cover all major pages/modules (Welcome, Login, Sign Up, User Home, User Profiles, Admin Home, Admin Profiles) with actors, use cases, and flows.
+                     * Alignment: Diagrams match the business requirements (US_01, US_02, US_03) and acceptance criteria from the Agile Track System specification.

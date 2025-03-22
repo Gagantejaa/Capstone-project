@@ -1,0 +1,137 @@
+/* Dashboard Container */
+.dashboard-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef; /* Light gray-blue border */
+}
+
+.dashboard-header h2 {
+    color: #007bff; /* Blue header */
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Add Scrum Button */
+.add-scrum-button {
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.add-scrum-button:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+/* Scrum Form Container */
+.scrum-form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f1f5f9; /* Light blue-gray */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.scrum-form .form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.scrum-form .form-control,
+.scrum-form .form-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da; /* Bootstrap gray */
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.scrum-form .form-control:focus,
+.scrum-form .form-select:focus {
+    border-color: #007bff; /* Blue focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* Create Scrum Button */
+.scrum-form .btn-primary {
+    background-color: #007bff; /* Blue */
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.scrum-form .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+/* Scrum List */
+.scrum-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.scrum-item {
+    padding: 15px;
+    background: #f8f9fa; /* Light gray-blue */
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.scrum-item:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.scrum-item span {
+    font-size: 16px;
+    color: #333;
+}
+
+.scrum-item .btn-info {
+    background-color: #17a2b8; /* Cyan for details button */
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.scrum-item .btn-info:hover {
+    background-color: #138496; /* Darker cyan */
+}

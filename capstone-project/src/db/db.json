@@ -1,0 +1,211 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Arghya",
+      "email": "Arghya@example.com",
+      "password": "adminpassword",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "name": "Ananya Sharma",
+      "email": "ananya.sharma@example.com",
+      "password": "password1",
+      "role": "employee"
+    },
+    {
+      "id": "3",
+      "name": "Vikram Rao",
+      "email": "vikram.rao@example.com",
+      "password": "password2",
+      "role": "employee"
+    },
+    {
+      "id": "4",
+      "name": "Neha Verma",
+      "email": "neha.verma@example.com",
+      "password": "password3",
+      "role": "employee"
+    },
+    {
+      "id": "d5d6",
+      "name": "Gagan teja",
+      "email": "gagan@gmail.com",
+      "password": "1234567",
+      "role": "employee"
+    }
+  ],
+  "scrums": [
+    {
+      "id": "101",
+      "name": "Bangalore Tech Team"
+    },
+    {
+      "id": "102",
+      "name": "Chennai Innovators"
+    },
+    {
+      "id": "103",
+      "name": "Mumbai Developers"
+    },
+    {
+      "id": "104",
+      "name": "Hyderabad Coders"
+    },
+    {
+      "id": "105",
+      "name": "Pune Agile Team"
+    },
+    {
+      "id": "72e9",
+      "name": "Wipro elite"
+    },
+    {
+      "id": "24b8",
+      "name": "Demo"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "201",
+      "title": "Develop API Integration",
+      "description": "Implement authentication API for user login",
+      "status": "Done",
+      "scrumId": "101",
+      "assignedTo": "2",
+      "history": [
+        {
+          "status": "To Do",
+          "date": "2024-07-01"
+        },
+        {
+          "status": "Done",
+          "date": "2024-08-26"
+        },
+        {
+          "status": "In Progress",
+          "date": "2025-03-20"
+        },
+        {
+          "status": "Done",
+          "date": "2025-03-21"
+        }
+      ]
+    },
+    {
+      "id": "202",
+      "title": "Optimize Database Queries",
+      "description": "Improve database indexing and optimize slow queries",
+      "status": "Done",
+      "scrumId": "102",
+      "assignedTo": "3",
+      "history": [
+        {
+          "status": "To Do",
+          "date": "2024-07-02"
+        },
+        {
+          "status": "In Progress",
+          "date": "2024-07-03"
+        },
+        {
+          "status": "Done",
+          "date": "2025-03-18"
+        },
+        {
+          "status": "Done",
+          "date": "2025-03-20"
+        }
+      ]
+    },
+    {
+      "id": "203",
+      "title": "Implement UI Design",
+      "description": "Redesign the dashboard layout using React",
+      "status": "In Progress",
+      "scrumId": "103",
+      "assignedTo": "4",
+      "history": [
+        {
+          "status": "In Progress",
+          "date": "2024-08-26"
+        },
+        {
+          "status": "Done",
+          "date": "2025-03-18"
+        },
+        {
+          "status": "In Progress",
+          "date": "2025-03-18"
+        },
+        {
+          "status": "To Do",
+          "date": "2025-03-19"
+        },
+        {
+          "status": "In Progress",
+          "date": "2025-03-19"
+        }
+      ]
+    },
+    {
+      "id": "204",
+      "title": "Security Enhancement",
+      "description": "Implement OAuth2 for secure authentication",
+      "status": "To Do",
+      "scrumId": "104",
+      "assignedTo": "5",
+      "history": [
+        {
+          "status": "To Do",
+          "date": "2024-07-15"
+        }
+      ]
+    },
+    {
+      "id": "205",
+      "title": "Mobile App Integration",
+      "description": "Integrate mobile push notifications for real-time updates",
+      "status": "To Do",
+      "scrumId": "105",
+      "assignedTo": "3",
+      "history": [
+        {
+          "status": "To Do",
+          "date": "2024-06-10"
+        },
+        {
+          "status": "In Progress",
+          "date": "2024-07-01"
+        },
+        {
+          "status": "Done",
+          "date": "2025-03-19"
+        },
+        {
+          "status": "In Progress",
+          "date": "2025-03-19"
+        }
+      ]
+    },
+    {
+      "id": "a595",
+      "title": "Demo",
+      "description": "Demo",
+      "status": "Done",
+      "scrumId": "24b8",
+      "assignedTo": "d5d6",
+      "history": [
+        {
+          "status": "To Do",
+          "date": "2025-03-21"
+        },
+        {
+          "status": "Done",
+          "date": "2025-03-21"
+        }
+      ]
+    }
+  ]
+}
